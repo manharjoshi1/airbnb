@@ -9,9 +9,9 @@ const ProfileBar = () => {
   return (
     <React.Fragment>
       <Box sx={{ ...dFlex }}>
-        <Button variant="text">
+        <Link>
           <Typography>Become A Host</Typography>
-        </Button>
+        </Link>
         <IconButton aria-label="duniya">
           <TbWorld />
         </IconButton>
@@ -24,6 +24,7 @@ const ProfileBar = () => {
           sx={{
             borderRadius: "88px",
             borderStyle: "groove",
+
             height: 50,
             width: 108,
             elevation: 10,
@@ -32,7 +33,7 @@ const ProfileBar = () => {
           <GiHamburgerMenu style={{ width: 24, height: 24 }} />
           <AccountCircleOutlinedIcon
             fontSize="large"
-            sx={{ width: 24, height: 24, marginLeft: "16px" }}
+            sx={{ width: "28px", height: "28px", marginLeft: "16px" }}
           />
         </Button>
       </Box>
