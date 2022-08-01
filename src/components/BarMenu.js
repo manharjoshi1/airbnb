@@ -3,6 +3,7 @@ import { Button, ButtonGroup, Divider, Icon, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { IoSearchCircle } from "react-icons/io5";
 import { pink } from "@mui/material/colors";
+import { justifyCenter } from "../theme/commonTheme";
 const BarMenu = () => {
   const choices = [
     { id: 1, text: "Anywhere" },
@@ -10,21 +11,24 @@ const BarMenu = () => {
     { id: 3, text: "Add Guest", icon: true },
   ];
   return (
-    <Box sx={{ border: 0, borderRadius: "50%" }}>
+    <Box sx={{ ...justifyCenter, border: 0, borderRadius: "50%" }}>
       <ButtonGroup
-        className="buttongroup"
+        className="buttondis"
         disableRipple
-        sx={{ boxShadow: 3, height: 55 }}
+        sx={{
+          borderRadius: 10,
+          boxShadow: 3,
+          height: 55,
+        }}
       >
         {choices.map((e) => {
           return (
-            <>
+            <React.Fragment key={e.id}>
               <Button
-                key={e.id}
                 className="buttondis"
                 disableElevation
                 disableFocusRipple
-                sx={{ border: 0 }}
+                sx={{ borderWidth: 0 }}
               >
                 <Typography
                   style={{ "border:hover": "0" }}
@@ -52,7 +56,7 @@ const BarMenu = () => {
               {e.id !== choices.length && (
                 <Divider orientation="vertical" flexItem sx={{ p: 1 }} />
               )}
-            </>
+            </React.Fragment>
           );
         })}
       </ButtonGroup>

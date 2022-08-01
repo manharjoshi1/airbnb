@@ -1,4 +1,11 @@
-import { Button, Icon, IconButton, Typography } from "@mui/material";
+import {
+  Button,
+  Icon,
+  IconButton,
+  Link,
+  Stack,
+  Typography,
+} from "@mui/material";
 import { Box, Container } from "@mui/system";
 import React from "react";
 import { flexBetweenCenter, flexBetween, dFlex } from "../theme/commonTheme";
@@ -10,38 +17,39 @@ const ProfileBar = () => {
   return (
     <React.Fragment>
       <Box sx={{ ...dFlex }}>
-        <Box sx={{ width: "100%", ...flexBetween }}>
-          <Button variant="text">
+        <Box sx={{ width: "100%", ...flexBetweenCenter }}>
+          <Link>
             <Typography>Become A Host</Typography>
-          </Button>
-          <Box sx={{ py: 1, px: 2 }}>
+          </Link>
+          <Stack sx={{ ...dFlex, py: 1, px: 2 }}>
             <IconButton
               sx={{ padding: "5px", height: "50px", width: "64px" }}
               aria-label="duniya"
             >
-              <BsGlobe style={{ height: "24px", width: "24px" }} />
+              <BsGlobe size={24} />
             </IconButton>
             <Button
               variant="outlined"
-              //   className="buttondis buttongroup"
+              className="buttondis"
               disableElevation
               disableRipple
               disableFocusRipple
               sx={{
-                borderRadius: "88px",
-                borderStyle: "groove",
+                borderRadius: 10,
+                border: "1px solid #ddd",
                 height: 50,
                 width: 108,
                 elevation: 10,
               }}
             >
-              <GiHamburgerMenu style={{ width: 24, height: 24 }} />
+              <GiHamburgerMenu size={24} />
               <AccountCircleOutlinedIcon
                 fontSize="large"
+                size={24}
                 sx={{ width: 24, height: 24, marginLeft: "16px" }}
               />
             </Button>
-          </Box>
+          </Stack>
         </Box>
       </Box>
     </React.Fragment>

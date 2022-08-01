@@ -2,6 +2,8 @@ import { CssBaseline, Divider } from "@mui/material";
 import React from "react";
 import Box from "@mui/material/Box";
 import Header from "./components/Header";
+import MobileSearch from "./components/MobileSearch";
+import Slider from "./components/Slider";
 function App() {
   return (
     <React.Fragment>
@@ -15,8 +17,12 @@ function App() {
       >
         <Box>
           <Header />
+          <Divider />
         </Box>
-        <Divider />
+
+        <Box>
+          <Slider />
+        </Box>
       </Box>
     </React.Fragment>
   );
